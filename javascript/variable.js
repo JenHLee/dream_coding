@@ -1,6 +1,6 @@
 'use strict';
 
-//2. Variable
+//2. Variable, rw(read/write) (처음 ellie지정, 이후 hello로 변경 가능)
 //let (added in ES6)
 let globalName = 'global name';
 {
@@ -28,7 +28,7 @@ console.log(globalName);
      var lastname;
     }
 
-// 3. constants
+// 3. Constant (r : read) //읽기만 가능, 값 변경 불가
 // favor immutable datat type always for a few reasons:
 // - security
 // - thread safety
@@ -36,9 +36,17 @@ console.log(globalName);
 const daysInWeek = 7;
 const maxNumber = 5;
 
-// 4. Variable types
-// primitive, single item : number, string, boolean, null, undefined, symbol
-// object, box container
+// Note!
+// Immutable data types: premitive types, frozen objects (i.e. object.freeze()) // data자체를 변경하는 것 불가능
+// Mutable data types: all objects by default are mutable in JS // object안에있는 이름이나 나이 ref가 가리키는것은 수정 가능했던 것 처럼, mutable datatype임
+// favor immutable data type always for a few reasons:
+// - security
+// - thread safety
+// - reduce human mistakes 
+
+// 4. Variable types (primitive인지 object type인지에 따가 메모리에 다른 형태로 저장됨)
+// primitive, single item : number, string, boolean, null, undefined, symbol ->값이 바로 그대로 저장
+// object, box container -> 값이 너무 크기때문에 그대로 저장 불가 ref(레퍼런스는 실제로 object들을 가리키고 있는 곳-> 이것이 실제로 메모리가 담겨있는 object를 가리킴 )
 // function, first-class function 
 
 // number - special numeric values : infinity, -infinity, NaN
