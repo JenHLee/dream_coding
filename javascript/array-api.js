@@ -31,11 +31,11 @@
   const array = [1, 2, 3, 4, 5];
   const array1 = [1, 2, 3, 4, 5];
   const array2 = [1, 2, 3, 4, 5];
-  const result = array.splice(2); // 1,2 삭제, 나머지 남은 것 return
+  const result = array.splice(2); // 1,2 deleted, left over return
   console.log(result); // (3) [3, 4, 5]
   console.log(array); // (2) [1, 2]
 
-  const result1 = array1.splice(0, 2); // 0~2의 앞까지 삭제, 삭제된 요소 return
+  const result1 = array1.splice(0, 2); // 0~2 deleted, deleted element return
   console.log(result1); // (2) [1, 2]
   console.log(array1); // (3) [3, 4, 5]
 
