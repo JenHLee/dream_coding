@@ -1,5 +1,5 @@
 "use strict";
-// Object-oriendted programing
+// Object-oriendted Programing
 // class: template
 // object: instance of a class
 // JavaScript classes
