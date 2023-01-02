@@ -1,5 +1,5 @@
 [
-  { "name": "Jeans", "price": "$50" },
-  { "name": "T-shirts", "price": "$50" },
-  { "name": "Boots", "price": "$20" }
+  { "name": "Jeans", "price": "$50", "id": "1"},
+  { "name": "T-shirts", "price": "$50", "id": "2" },
+  { "name": "Boots", "price": "$20", "id": "3" }
 ]
