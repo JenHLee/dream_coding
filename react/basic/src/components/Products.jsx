@@ -3,9 +3,12 @@ import React, { useEffect, useState } from "react";
 export default function Products() {
   const [count, setCount] = useState(0);
   const [products, setProducts] = useState([]);
+  const [checked, setChecked] = useState(false);
+
+  const handleChange = () => setChecked((prev) => !prev);
 
   useEffect(() => {
-    fetch("data/products.json")
+    fetch(`data/${checked? 'sale_' : ''}products.json`) //checked? true : false
       .then((res) => res.json())
       .then((data) => {
         console.log("🔥 data from network");
@@ -14,10 +17,12 @@ export default function Products() {
     return () => {
       console.log("🧹 clean");
     };
-  }, []);
+  }, [checked]); // dependency: checked 가 변화할때마다 re-render
 
   return (
     <>
+    <input id='checkbox' type='checkbox' value={checked} onChange={handleChange}/>
+    <label htmlFor="checkbox">Show Only 🔥 Sale</label>
       <ul>
         {products.map((product) => {
           return (
