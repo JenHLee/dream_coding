@@ -1,6 +1,6 @@
 // Function
 // - funcdamental building block in the program
-// - subprogram can be used multiple times (재사용 가능)
+// - subprogram can be used multiple times (reusable)
 // - performs a task or calculates a value (한가지의 task, 어떤 값 계산 위해 사용)
 
 // 1. Function declaration
